@@ -61,7 +61,7 @@ public class Cereal
     public String toString()
         {
             
-            return  getCerealName() + " Has the greatest number of potassium, with an Amount of: " + getPotassium();
+            return  "Name: " + cerealName + "Rating: " + rating + "Potassium: " + potassium + "Sodium: " + sodium;
         }
         
 
@@ -80,18 +80,18 @@ public class Cereal
         listOfCereals.add(cereal4);
         listOfCereals.add(cereal5);
 
-        int temp = Integer.MIN_VALUE; 
+        int tempPotassium= Integer.MIN_VALUE; 
         String tempCereal = "";   
         for (Cereal cereal : listOfCereals) 
             {
-                if (cereal.getPotassium() > temp)
+                if (cereal.getPotassium() > tempPotassium)
                     {
                         tempCereal = cereal.getCerealName();
-                        temp = cereal.getPotassium();
+                       tempPotassium = cereal.getPotassium();
                         
                     }
             }
-        System.out.println(tempCereal);
+        System.out.println(tempCereal + "Has the most amount of Potassium with an Amount of: " + tempPotassium);
         }
         
 }
